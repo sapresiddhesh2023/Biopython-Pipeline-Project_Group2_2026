@@ -1,0 +1,72 @@
+LOCUS       LS398548                1401 bp    DNA     linear   BCT 12-MAY-2018
+DEFINITION  Orientia tsutsugamushi isolate Karp genome assembly, chromosome: I.
+ACCESSION   LS398548 REGION: 259634..261034
+VERSION     LS398548.1
+DBLINK      BioProject: PRJEB24834
+            BioSample: SAMEA104570320
+KEYWORDS    .
+SOURCE      Orientia tsutsugamushi
+  ORGANISM  Orientia tsutsugamushi
+            Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+            Rickettsiales; Rickettsiaceae; Rickettsieae; Orientia.
+REFERENCE   1
+  AUTHORS   Batty,M.E. and Batty M,E.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (29-MAR-2018) OXFORD UNIVERSITY, Wellcome Centre for
+            Human Genetics, Roosevelt Drive, Oxford, OX3 7BN, United Kingdom
+FEATURES             Location/Qualifiers
+     source          1..1401
+                     /organism="Orientia tsutsugamushi"
+                     /mol_type="genomic DNA"
+                     /isolate="Karp"
+                     /type_material="type strain of Orientia tsutsugamushi"
+                     /db_xref="taxon:784"
+                     /chromosome="I"
+     gene            1..1401
+                     /gene="TSA47"
+                     /locus_tag="KARP_00285"
+     CDS             1..1401
+                     /gene="TSA47"
+                     /locus_tag="KARP_00285"
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:RefSeq:WP_011945069.1"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="Type surface antigen 47 (47 kDa/htrA)"
+                     /protein_id="SPR14422.1"
+                     /translation="MKKAFYLHLIVFALQGISNVHSKSLLNQKALLPQQKSDMHINVN
+                     SLSDIVEPLISTVVSIYAVDTNIGISFNNKVSKYQQEVFLGSGVIIDSSGYIVTNENV
+                     IAGAENIKVKLHDGSELIAELVGSDNKINIALLKINSPAALSYATFGDSNQSRVGDQV
+                     IAIGSPFGLRGTVTNGIISSKGRDMGNGIVTDFIQTNAAIHMGSFGGPMFNLEGKIIG
+                     INSIHVSYSGISFAIPSNTVLEAVECLKKGEKIRRGMLNVMLNELTPELNENLGLKQD
+                     QNGVLITEVIKEGSAAQCGIAPGDVITKFHDKAIKTGRDLQVAVSSTMLNSEREVELL
+                     RNGKSMTLKCKIIANKGEDSEQQSNDQSLVVNGVKFVDLTPDLVKKYNITSANNNGLF
+                     VLEVSPNSSWGRYGLKMGLRPRDIILSVKRDDNKKDISVKTLREIVTNIKHNEIFFTV
+                     QRGDRMLYIALPNINK"
+ORIGIN      
+        1 atgaaaaagg cattttattt acatttaata gtatttgcat tacaaggtat aagtaatgtt
+       61 cattctaaat cgctactaaa tcaaaaagca ttattacctc aacaaaaatc tgatatgcat
+      121 attaatgtaa atagtttatc tgatatagtt gagccattaa tatctacagt agtaagtatt
+      181 tatgctgtag atactaacat tggtattagt tttaataata aggtatctaa gtatcagcaa
+      241 gaagtgttct taggttctgg ggttatcatt gatagttctg ggtatattgt tactaatgag
+      301 aatgttatag caggagctga aaatataaaa gtaaagttgc atgatggttc agaactcata
+      361 gcagaattag ttggtagtga caataaaatt aatatagctt tattaaaaat taattctcca
+      421 gcagcattat cttatgcgac ttttggcgac tcaaatcagt ctagagtagg agatcaggtt
+      481 attgcaatag gaagtccttt tggtttaaga ggaacagtaa caaatggcat tatttcttct
+      541 aaaggacgag atatgggtaa cggcatagta actgatttta ttcaaactaa tgctgctatt
+      601 catatgggta gctttggtgg accgatgttt aatcttgaag gaaaaattat tggaattaat
+      661 tccattcacg tatcttactc aggcataagt tttgctattc catctaatac tgtacttgaa
+      721 gcagttgaat gcttaaaaaa aggagaaaaa attcgtcgtg gtatgttaaa tgttatgctt
+      781 aatgaattaa ctccagaatt aaatgagaat ttaggactta aacaagatca aaatggagtt
+      841 ctaataactg aagttataaa agaaggatct gcagcacaat gtggaattgc tcctggagat
+      901 gtaattacta aatttcatga taaagcgatc aaaacaggga gagatttaca ggtagctgta
+      961 tcttcaacta tgcttaattc tgaaagagaa gttgagcttt tacgtaatgg taagtcgatg
+     1021 actctaaaat gtaaaattat tgccaacaaa ggtgaggata gtgagcaaca aagtaatgat
+     1081 caaagccttg tggttaatgg tgtaaaattt gttgatctta cacctgattt agtgaagaaa
+     1141 tataatatta cttcagctaa taataatggg ttatttgtcc ttgaagtttc gcctaactct
+     1201 tcttggggga gatatggttt aaaaatgggg ctaagaccta gagatataat tttatcagtt
+     1261 aaacgtgatg ataataaaaa agatatttct gttaaaactc taagagaaat agtgacaaat
+     1321 ataaagcata atgaaatttt ctttacagtg caaagaggag atagaatgct ttacattgct
+     1381 ttacctaaca ttaataagta a
+//
+
