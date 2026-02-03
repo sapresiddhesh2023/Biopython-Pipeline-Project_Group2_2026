@@ -1,2 +1,2 @@
 # Biopython-Pipeline-Project_Group2_2026
-In silico identification and functional characterisation of TSA47 from Orientia tsutsugamushi using sequence analysis and homology based annotation. This project was performed using Biopython.
+In silico identification and functional characterisation of TSA47 from Orientia tsutsugamushi using sequence analysis and homology based annotation. This project was performed using Biopython. There are majorly 6 steps in the project among which, the most important step is to choose a nucleotide sequence or a protein sequence of choice. Fr this project, disease-related protein was therefore chosen as the query sequence. Visual Studio Code was used for writing the code with Biopython installed as plugin. 
