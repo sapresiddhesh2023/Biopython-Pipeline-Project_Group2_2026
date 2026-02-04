@@ -1,28 +1,28 @@
 from Bio import SeqIO 
-from Bio.Seq import Seq
 
-VALID_DNA = set("ATGC")
-input_fasta = "Otsutsugamushi_Karp_tsa47.fasta" 
-output_fasta = "filtered_sequence.fasta"
+# Standard 20 amino acids + optional stop (*)
+VALID_AA = set("ACDEFGHIKLMNPQRSTVWY*")
+
+input_fasta = "protein_sequence.fasta"
+output_fasta = "filtered_protein.fasta"
 
 filtered_records = []
-for record in SeqIO.parse(input_fasta, "fasta"): 
+
+for record in SeqIO.parse(input_fasta, "fasta"):
     seq = str(record.seq).upper()
-    # 1. Length filter 
-    if len(seq) < 10: 
+
+    # 1. Length filter
+    if len(seq) < 30:
         continue
 
-    # 2. Alphabet validation 
-    if not set(seq).issubset(VALID_DNA): 
-        print(f"Invalid characters in {record.id}") 
+    # 2. Amino acid alphabet validation
+    if not set(seq).issubset(VALID_AA):
+        print(f"Invalid characters found in {record.id}")
         continue
 
-    # 3. Must start with ATG 
-    if not seq.startswith("ATG"): 
-        continue 
     filtered_records.append(record)
 
-    # Write filtered sequences 
-    SeqIO.write(filtered_records, output_fasta, "fasta") 
-    print(f"Saved {len(filtered_records)} valid sequences.")
+# Write AFTER loop
+SeqIO.write(filtered_records, output_fasta, "fasta")
 
+print(f"Saved {len(filtered_records)} valid protein sequences.")
