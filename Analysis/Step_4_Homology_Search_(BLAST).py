@@ -36,6 +36,9 @@ for alignment in blast_rec.alignments:
 
     for hsp in alignment.hsps:
         print(" E-value:", hsp.expect)
+        print(" HSP score:", hsp.score)
+        print(" HSP bit score:", hsp.bits)
         print(" Identity:", hsp.identities, "/", hsp.align_length)
         print(" Query region:", hsp.query_start, "-", hsp.query_end)
         print(" Subject region:", hsp.sbjct_start, "-", hsp.sbjct_end)
+
