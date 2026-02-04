@@ -1,6 +1,6 @@
 #Step 2 of the project has been performed to perform the Sequence Quality Analysis.
 #This includes reading the sequence using BioPython, calculation of each amino acid content.
-#In addition, I have also included the AT/GC ratio, presence of any ambiguous bases (N), complement sequence, reverse complement, transcription and translation sequence.
+#In addition, I have also included the amino acid sequence percentage for different types of amino acid content.
 #Since type of amino acids affect the structure of protein to a large extent, I have also included type of amino acids.
 from Bio import SeqIO
 record = SeqIO.read("Otsutsugamushi_Karp_tsa47.fasta", "fasta")
@@ -56,4 +56,5 @@ print("-"*90)
 print("Stop codons in this sequence (expected to be one):",StopCodon_count+1)
 print("-"*90)
 print("End of Quality check. All parameters fulfilled. The query sequence passed the quality checks successfully.")
+
 
