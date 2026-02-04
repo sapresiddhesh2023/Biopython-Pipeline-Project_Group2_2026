@@ -4,6 +4,6 @@ List of participants in this Group Project:
 1. Gayathri Snigdha
 2. Paripoorna Reddy
 3. Purvi Shah
-4. Sameen Khaled
+4. Sameen Khalid
 5. Siddhesh Uday Sapre
 6. Vaidehi Kadam
