@@ -1,4 +1,3 @@
-from Bio.Blast import NCBIWWW
 from Bio import SeqIO
 from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
@@ -22,7 +21,7 @@ sequence = (
 
 print("Performing BLASTP search...")
 
-# Perform BLASTP
+# Performing BLASTP
 result_handle = NCBIWWW.qblast(
     program="blastp",
     database="refseq_protein",
@@ -30,8 +29,9 @@ result_handle = NCBIWWW.qblast(
     hitlist_size=50
 )
 
-# Save results
-with open("blast_results.xml", "w") as out:
-    out.write(result_handle.read())
+# Saving results
+with open("blast_results.xml", "w") as b:
+    b.write(result_handle.read())
 
 print("BLAST completed and saved to blast_results.xml")
+
