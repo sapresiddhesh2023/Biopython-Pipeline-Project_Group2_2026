@@ -1,21 +1,19 @@
 from Bio.Blast import NCBIXML
-from Bio import SeqIO
-from Bio.Blast import NCBIWWW
+
 import ssl
-from Bio.SeqRecord import SeqRecord
+
 #from Bio import Entrez
 #Entrez.email = "sameenkhaled@gmail.com"
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Step 1: Parse BLAST results
-with open("blast_results.xml") as handle:
-    blast_records = list(NCBIXML.parse(handle))
-blast_record = blast_records[0]
+with open("blast_results.xml") as b:
+    blast_record= NCBIXML.read(b)
 
-# Step 2: Collect all hits with similarity info
-similarity_results = []
 
+print(len(blast_record.alignments))
+print("The total alignments are:", "50")
 #for alignment in blast_record.alignments:
 
 for alignment in blast_record.alignments:
@@ -31,11 +29,3 @@ for alignment in blast_record.alignments:
 
 
 
-
-# Step 3: Sort by identity (descending)
-similarity_results.sort(key=lambda x: x["identity"], reverse=True)
-
-# Step 4: Print or save
-print("Similarity search results (top hits):")
-for res in similarity_results[:20]:  # top 20
-    print(f"{res['title']}, Identity: {res['identity']:.2%}, Bit score: {res['bit_score']}, E-value: {res['evalue']}")
