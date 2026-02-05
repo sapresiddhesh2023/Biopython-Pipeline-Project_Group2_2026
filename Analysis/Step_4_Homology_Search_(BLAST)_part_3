@@ -88,3 +88,4 @@ else:
 print("\nEvolutionary hints (species/organism info from top hits):")
 for hit in closest_hits[:10]:
     print(f"- {hit['title']}")
+
