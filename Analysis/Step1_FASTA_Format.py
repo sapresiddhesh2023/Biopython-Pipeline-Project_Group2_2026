@@ -9,5 +9,6 @@ from Bio import SeqIO
 record = SeqIO.read("Otsutsugamushi_Karp_tsa47.fasta", "fasta")
 print("The following protein record has Nucleotide ID:", record.id)
 print(record.description)
-print("The length of the sequence is:", len(record.seq), "bp")
+print("The length of the sequence is:", len(record.seq), "amino acids")
 print("The protein sequence is:", record.seq)
+
