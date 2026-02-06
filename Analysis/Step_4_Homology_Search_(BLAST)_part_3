@@ -1,33 +1,28 @@
 from Bio.Blast import NCBIXML
 from Bio import Entrez, SeqIO
-from Bio.Blast import NCBIXML
-from Bio import Entrez
 import ssl
 from Bio.SeqRecord import SeqRecord
 ssl._create_default_https_context = ssl._create_unverified_context
 
 from collections import Counter
 
-ssl._create_default_https_context = ssl._create_unverified_context
-
-# Step 0: Set your email for NCBI Entrez
 Entrez.email = "sameenkhaled@gmail.com"
 
 from Bio.Blast import NCBIXML
 # Step 1: Parse the BLAST results
 with open("blast_results.xml") as handle:
-    blast_records = list(NCBIXML.parse(handle))  # parse all records
+    blast_records = list(NCBIXML.parse(handle)) 
 
-blast_record = blast_records[0]  # assuming one query
+blast_record = blast_records[0]  
 
-# Step 2: Find closest homologs based on E-value and identity
+# Step 2: Closest homologs based on E-value and identity
 closest_hits = []
 
 for alignment in blast_record.alignments:
     best_hsp = max(alignment.hsps, key=lambda h: h.bits)
     identity_fraction = best_hsp.identities / best_hsp.align_length
 
-    # filter for significant hits
+    
     if best_hsp.expect < 1e-5 and identity_fraction >= 0.35:
         closest_hits.append({
             "title": alignment.title,
@@ -47,7 +42,7 @@ for hit in closest_hits[:10]:
     print(f"  E-value: {hit['evalue']}")
     print(f"  Query region: {hit['q_start']}-{hit['q_end']}\n")
 
-# Step 3: Fetch sequences of top hits from NCBI
+# Step 3: Top hits from NCBI
 records = []
 print("Fetching sequences of top hits from NCBI...")
 for hit in closest_hits[:10]:  # top 10 hits
@@ -63,24 +58,24 @@ for hit in closest_hits[:10]:  # top 10 hits
     except Exception as e:
         print(f"Failed to fetch {hit['accession']}: {e}")
 
-# Save sequences locally
+
 SeqIO.write(records, "homologs.fasta", "fasta")
 print("Sequences saved to homologs.fasta\n")
 
-# Step 4: Detect conserved regions (simple column method)
+# Step 4: Conserved regions (simple column method)
 if len(records) > 1:
-    seq_length = min(len(r.seq) for r in records)  # trim to shortest
+    seq_length = min(len(r.seq) for r in records)  
     conserved_positions = []
 
     for i in range(seq_length):
         column = [str(r.seq[i]) for r in records]
-        most_common = Counter(column).most_common(1)[0]  # (aa, count)
+        most_common = Counter(column).most_common(1)[0]  
         conservation = most_common[1] / len(records)
         if conservation >= 0.8:  # >=80% conserved
             conserved_positions.append((i + 1, most_common[0]))
 
     print("Highly conserved positions (1-based index):")
-    print(conserved_positions[:20], "…")  # first 20 for brevity
+    print(conserved_positions[:20], "…")  
 else:
     print("Not enough sequences for conserved region analysis.\n")
 
@@ -88,4 +83,5 @@ else:
 print("\nEvolutionary hints (species/organism info from top hits):")
 for hit in closest_hits[:10]:
     print(f"- {hit['title']}")
+
 
