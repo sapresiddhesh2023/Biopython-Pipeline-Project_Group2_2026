@@ -9,8 +9,10 @@ List of participants in this Group Project:
 6. Vaidehi Kadam
 
 **The Organisation of the respective data files is as follows:**
-Data folder: has all the input files which have been used in the syntax included within the .py files. These files will have .fasta, .gb, .txt, .md or .xml as extension.
-Analysis: has all the files with respective systax codes. These files have .py as extension.
-Results: has all the results files which need to be described as text with the extension .txt.
-README.md: has all the necessary information needed to comprehend this project independently.
+1. Data folder: has all the input files which have been used in the syntax included within the .py files. These files will    
+   have .fasta, .gb, .txt, .md or .xml as extension.
+2. Analysis: has all the files with respective systax codes. These files have .py as extension.
+3. Results: has all the results files which need to be described as text with the extension .txt.
+4. README.md: has all the necessary information needed to comprehend this project independently.
+
 *Note*: The project was presented also as a powerpoint slide, which has also been uploaded as PDF file in the main repository.
